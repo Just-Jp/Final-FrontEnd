@@ -1,0 +1,112 @@
+body {
+    background-image: url("Images/BG_Ateliê_Alien.jpg");
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1.2rem;
+    text-align: center;
+  }
+  
+  .card-content h2 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00bfff;
+    margin: 0.7rem 0;
+  }
+  
+  .card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-view {
+    background-color: #00bfff;
+    color: #121212;
+  }
+  
+  .btn-view:hover {
+    background-color: #0099cc;
+  }
+  
+  .btn-cart {
+    background-color: #32CD32;
+    color: #121212;
+  }
+  
+  .btn-cart:hover {
+    background-color: #228B22;
+  }
+  
+  /* Tablet (a partir de 600px) */
+  @media (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Desktop (a partir de 900px) */
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
