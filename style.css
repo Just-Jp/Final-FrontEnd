@@ -1,11 +1,13 @@
 body {
     background-image: url("Images/BG_Ateliê_Alien.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
     color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 2rem;
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     box-sizing: border-box;
   }
   
