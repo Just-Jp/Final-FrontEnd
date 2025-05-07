@@ -1,7 +1,7 @@
 body {
     background-image: url("Images/BG_Ateliê_Alien.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100vw;
     color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,6 +19,7 @@ body {
   .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
   }
   
   .grid {
@@ -99,6 +100,84 @@ body {
     background-color: #228B22;
   }
   
+  /* Estilos para o carrossel em dispositivos móveis */
+  @media (max-width: 599px) {
+    .grid {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 0;
+    }
+    
+    .card {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      margin-right: 0;
+      display: none;
+    }
+    
+    .card.active {
+      display: block;
+    }
+    
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    
+    .carousel-control {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    
+    .carousel-control:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 8px;
+    }
+    
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+    }
+    
+    .indicator.active {
+      background-color: #00bfff;
+    }
+  }
+  
+  /* Esconder controles de carrossel em telas maiores */
+  @media (min-width: 600px) {
+    .carousel-controls, .carousel-indicators {
+      display: none;
+    }
+    
+    .card {
+      display: block !important;
+    }
+  }
+  
   /* Tablet (a partir de 600px) */
   @media (min-width: 600px) {
     .grid {
@@ -111,4 +190,26 @@ body {
     .grid {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+  
+  /* Estilo para o ícone do carrinho */
+  .cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 100;
+  }
+  
+  #cart-count {
+    background-color: #00bfff;
+    color: #121212;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
   }

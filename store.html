@@ -7,11 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Ícone do carrinho -->
+  <div class="cart-icon" onclick="window.location.href='carrinho.html'">
+    🛒 <span id="cart-count">0</span>
+  </div>
 
   <h1>Produtos</h1>
 
   <section class="gallery-container">
 
+    <div class="carousel-controls">
+      <button id="prevBtn" class="carousel-control">❮</button>
+      <button id="nextBtn" class="carousel-control">❯</button>
+    </div>
+    
     <div class="grid">
       <div class="card">
         <img src="Images/Blue.png" alt="Blue">
@@ -78,10 +87,15 @@
           </div>
         </div>
       </div>
-
     </div>
+    
 
+    <div class="carousel-indicators"></div>
   </section>
+
+
+  <script src="script.js"></script>
+
 
 </body>
 </html>
