@@ -3,19 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atelie Alien Store</title>
+  <title>Ateliê Alien Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="cart-icon" onclick="window.location.href='cart.html'">
-    🛒 <span id="cart-count">0</span>
-  </div>
 
+  <div class="menu-overlay"></div>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="modif-logo">
+        <img src="../images/atelie_alien-logo_horizontal-rosa.png" alt="logo" class="logo-img" />
+      </div>
+
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PRODUTOS</a></li>
+          <li><a href="#">SOBRE</a></li>
+          <li><a href="#">LOGIN</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon">
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header> 
+ 
   <h1>Produtos</h1>
 
   <section class="gallery-container">
-
     <div class="carousel-controls">
       <button id="prevBtn" class="carousel-control">❮</button>
       <button id="nextBtn" class="carousel-control">❯</button>
@@ -25,13 +50,11 @@
      // desgraça de API entra aqui. 
     </div>
     
-
     <div class="carousel-indicators"></div>
   </section>
 
-
+  <script src="hamburger.js"></script>
   <script src="script.js"></script>
-
 
 </body>
 </html>
