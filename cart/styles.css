@@ -1,24 +1,118 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-
+/* adicionei o fundo de forma que ele caiba na pagina toda e nao fique repetindo */
 body {
     background-image: url("/imagens/BG_Ateliê_Alien.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-  
+
 }
 
-header {
-    background: #10598a;
-    color: #ebb8d5;
-    font-size: 24px;
-    padding: 20px 0;
-
+.navbar {
+    height: 70px;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #10598a;
+    padding: 20px 20px;
+    box-shadow: 0 2px 5px #ebb8d5;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* criei um container para englobar o lobo e os
+ nav links para que eu conseguisse arrumar o espaçamento
+ dos botoes na barra de navegação */
+.container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        padding: 0 40px;
+    }
+}
+
+/* modificacoes na div que engloba as partes do logo */
+.modif-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* modificacoes na imagem do logo */
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+
+/* modificaçoes no texto do logo */
+.logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: ;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* nav links a ,  para se referir a todos os elementos (links) que estao dentro do navlink */
+
+.nav-links a {
+    text-decoration: none;
+    color: #ebb8d5;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+
+/* adicionei o background branco para o conteudo */
+/* esse padding top deu aplicou a mesma altura na nav bar p eu tirar o 
+page tittle de tras dela */
+main {
+    background: #fff;
+    padding: 0 30px;
+    padding-top: 100px;
+}
+
+main .page-tittle {
+    font-size: 40px;
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+main .content {
+    display: flex;
+
+}
+
+main .content section {
+    flex: 1;
+}
+
+main .content aside {
+    background: red;
+    min-width: 250px;
 }

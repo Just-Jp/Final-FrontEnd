@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ateliê Alien Carrinho</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- importando biblioteca de icones boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
 </head>
+
+
 <body>
     <!-- cabeçalho -->
-    <header>
-        <span>Carrinho de compras do <b>Arthur</b></span>
-    
+    <header class="navbar">
+        <div class="container">
+            <div class="modif-logo">
+                <img src="/imagens/atelie_alien-selo.png" alt="logo" class="logo-img" />
+                <span class="logo-text">Ateliê Alien</span>
+            </div>
 
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PRODUTOS</a></li>
+                    <li><a href="#">.....</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    </header> 
     <!-- conteudo -->
-    <main>conteudo</main>
+    <main>
+        <div class="page-tittle">Seu Carrinho</div>
+        <div class="content">
+            <section>
+                <table>
+
+                    <!-- <thead> foi usada p agrupar o conteudo do cabecalho da tabela -->
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Total</th>
+                            <th>-</th>
+                        </tr>
+
+                    </thead>
+
+                    <!-- <tbody> foi usado p agrupar o conteudo principal da tabela, as partes que nao fazem parte do cabecalho -->
+                    <tbody>
+                        <td></td>
+                        <td>R$ 120</td>
+                        <td>
+                            <div class="qty">
+                                <button>-</button>
+                                <span></span>
+                                <button>+</button>
+
+                            </div>
+                        </td>
+                        <td>R$ 80</td>
+                        <td>
+                            <button>✖️</button>
+                        </td>
+                    </tbody>
+
+                </table>
+
+
+            </section>
+
+            <!-- usei o aside para representar o resumo das compras, algo relacionado ao conteudo principal, mas que nao tem total foco -->
+            <aside>Resumo das compras</aside>
+        </div>
+
+    </main>
+
+
 </body>
+
 </html>
