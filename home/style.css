@@ -1,14 +1,17 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #79bae5;
-    background-color: #57459b;
-    /* background-image: url("/atelie_alien-bg.jpg");
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("../atelie-alien-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100%; */
-
+    background-position: 100%;
+}
+/* 
     .olivita-regular {
         font-family: "olivita", sans-serif;
         font-weight: 400;
@@ -127,49 +130,63 @@ body {
         font-family: "Poppins", sans-serif;
         font-weight: 900;
         font-style: italic;
-    }
+    } */
 
     .navbar {
-        background-color: #14598a;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 20px 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
-        flex-wrap: wrap;
-        object-fit: cover;
     }
 
-    .logo img {
-        height: 60px;
+    /* Logo */
+    .logo {
+        font-family: 'Georgia', serif;
+        font-size: 18px;
+        letter-spacing: 1px;
     }
 
+    /* Links */
     .nav-links {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 30px;
     }
 
-    .nav-links li a {
+    .nav-buttons {
+        border-color: #14598a ;
+        background-color: #14598a;
+    }
+
+    .nav-links a {
         text-decoration: none;
-        color: #333;
-        font-weight: bold;
+        color: black;
+        font-size: 14px;
+        letter-spacing: 1px;
     }
 
-    .nav-links li a:hover {
-        color: #d14581;
+    /* Espaço extra para compensar a barra fixa */
+    .content {
+        padding-top: 100px;
     }
 
-    .produtos-preview {
-        text-align: center;
-        padding: 100px 100px;
-        background-color: #fff0f5;
+    /* imagem para fundo da barra de navegação */
+    header {
+        background-image: url("");
     }
 
+    .carousel img {
+        max-height: 80vh;
+        object-fit: cover;
 
 
-
-
-
+    }
 
     footer {
         background-color: #14598a;
@@ -178,12 +195,14 @@ body {
         font-size: 0.9em;
     }
 
-    .carousel img {
-        max-height: 500px;
-        object-fit: cover;
+    #acessoProdutos {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
     }
 
-
-
-
-}
+    #imgProdutos {
+    
+    }
