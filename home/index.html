@@ -17,19 +17,35 @@
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 ></script>
 <body>
-    <header class="navbar">
-        <div class="logo">
-          <img src="/atelie_alien-logo_horizontal-rosa.png" alt="Ateliê Alien logo" />
-        </div>
-        <!-- <button class="menu-toggle" onclick="toggleMenu()">☰</button> -->
-        <nav>
-          <ul class="nav-links" id="navLinks">
-            <button><a href="#">Home</a></button>
-            <button><a href="#">Produtos</a></button>
-            <button><a href="#">Login</a></button>
-            <button><a href="#">Sobre</a></button>
-          </ul>
-        </nav>
+  <div class="menu-overlay"></div>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="modif-logo">
+        <img src="../atelie_alien-logo_horizontal-rosa.png" alt="logo" class="logo-img" />
+      </div>
+
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PRODUTOS</a></li>
+          <li><a href="#">SOBRE</a></li>
+          <li><a href="#">LOGIN</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon">
+              🛒 <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header> 
       </header>
       
     <section>
@@ -56,7 +72,11 @@
     <div id="acessoProdutos">
         <img src="../atelie_alien-section-produtos.webp" id="imgSobre" alt="Acesso à página Sobre">
     </div>
-
+<footer>
+  <div>
+    
+  </div>
+</footer>
 </body>
 </html>
 
