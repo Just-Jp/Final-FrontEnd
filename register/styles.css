@@ -7,9 +7,8 @@
     font-weight: 400;
 }
 
-body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+body {
+    background-image: url(../src/BG_Ateliê_Alien.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +17,7 @@ body{
 }
 
 .container{
-    background-color: #fff;
+    background-color: #ebb8d5;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -40,15 +39,15 @@ body{
 }
 
 .container a{
-    color: #333;
+    color: #57459b;
     font-size: 13px;
     text-decoration: none;
     margin-top: 50px;
 }
 
 .container button{
-    background-color: #512da8;
-    color: #fff;
+    background-color: #57459b;
+    color: #ebb8d5;
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
@@ -62,11 +61,12 @@ body{
 
 .container button.hidden{
     background-color: transparent;
-    border-color: #fff;
+    border-color: #ebb8d5;
+    color: #ebb8d5;
 }
 
 .container form{
-    background-color: #fff;
+    background-color: #ebb8d5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,9 +146,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #57459b;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #5c6bc0, #57459b);
     color: #fff;
     position: relative;
     left: -100%;
@@ -202,8 +202,8 @@ body{
     margin-top: 10px;
     margin-left: 20px;
     font-size: 12px;
-    color: #333;
-    accent-color: #533aad;
+    color: #57459b;
+    accent-color: #57459b;
 }
 
 .input-wrapper {
@@ -216,38 +216,54 @@ body{
     font-size: 20px;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    color: #57459b;
 }
 
-h1 {
+.form-container h1 {
     font-family: 'Olivita', sans-serif;
     font-weight: 100;
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-size: 30px;
+    color: #57459b;
+}
+
+.toggle-container h1 {
+    font-family: 'Olivita', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #ebb8d5;
 }
 
 .toggle-right p {
     margin-top: 75px;
     margin-bottom: 0;
+    color: #ebb8d5;
 }
 
 .toggle-left span {
     margin-top: 0;
+    color: #ebb8d5;
+    font-size: 14px
 }
 
 .toggle-left p {
     margin-top: 100px;
     margin-bottom: 0;
+    color: #ebb8d5;
+    font-size: 14px;
 }
 
 .form-container button:hover {
-    background-color: #2c185b;
+    background-color: #57459b;
     transition: 0.75s;
 }
 
 .toggle-container button:hover {
-    background-color: white;
-    color: #595bba;
+    background-color: #ebb8d5;
+    color: #57459b;
     transition: 0.75s;
 }
