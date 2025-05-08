@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const productList = document.getElementById("product-list");
-    const apiUrl = "https://681be2676ae7c794cf70195d.mockapi.io/ateliealien/Produtos"; // substitua aqui pela sua URL real
+    const apiUrl = "https://681be2676ae7c794cf70195d.mockapi.io/ateliealien/Produtos"; 
   
     fetch(apiUrl)
       .then((response) => response.json())
