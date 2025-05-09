@@ -267,3 +267,7 @@ body {
     color: #57459b;
     transition: 0.75s;
 }
+
+.form-container button:hover {
+    background-color: #2c224e;  
+}
