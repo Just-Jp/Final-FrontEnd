@@ -17,33 +17,33 @@
             <form>
                 <h1>Registre-se</h1>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="Nome">
+                    <input id="register-name" type="text" placeholder="Nome">
                     <i class="ph-light ph-user"></i>
                 </div>
                 <div class="input-wrapper">
-                    <input type="text" placeholder="E-mail">
+                    <input id="register-email" type="text" placeholder="E-mail">
                     <i class="ph-light ph-envelope-simple"></i>
                 </div>
                 <div class="input-wrapper">
-                    <input type="password" placeholder="Senha">
+                    <input id="register-password" type="password" placeholder="Senha">
                     <i class="ph-light ph-lock-simple"></i>
                 </div class="input-wrapper">
                 <div class="input-wrapper">
-                    <input type="password" placeholder="Confirme sua senha">
+                    <input id="register-password-confirm" type="password" placeholder="Confirme sua senha">
                     <i class="ph-light ph-lock-simple"></i>
                 </div>
-                <button>Registrar</button>
+                <button type="submit">Registrar</button>
             </form>
         </div>
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
                 <div class="input-wrapper">
-                    <input type="email" placeholder="E-mail">
+                    <input id="login-email" type="email" placeholder="E-mail">
                     <i class="ph-light ph-envelope-simple"></i>
                 </div>
                 <div class="input-wrapper">
-                    <input type="password" placeholder="Senha">
+                    <input id="login-password" type="password" placeholder="Senha">
                     <i class="ph-light ph-lock-simple"></i>
                 </div>
                 <div class="checkbox-wrapper">
@@ -51,7 +51,7 @@
                     <label for="stayLoggedIn">Permanecer logado</label>
                 </div>
                 <a href="#">Esqueceu sua senha?</a>
-                <button>Entrar</button>
+                <button type="submit">Entrar</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -60,12 +60,12 @@
                     <h1>Seja bem-vindo!</h1>
                     <span>Digite seus dados e boas compras</span>
                     <p>Ja é nosso cliente?</p>
-                    <button class="hidden" id="login">Iniciar Sessão</button>
+                    <button type="submit" class="hidden" id="login">Iniciar Sessão</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Bem-vindo de volta!</h1>
                     <p>Ainda não é nosso cliente?</p>
-                    <button class="hidden" id="register">Registre-se</button>
+                    <button type="submit" id="register">Registre-se</button>
                 </div>
             </div>
         </div>
