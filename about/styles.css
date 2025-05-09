@@ -385,3 +385,43 @@
   max-width: 75%;
   height: auto;
   }
+  footer {
+    background-color: #14598a;
+    color: #ebb8d5;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  /* Conteudos do footer */
+  i {
+    font-size: 35px;
+  }
+  
+  .blocosFooter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .textoCopy {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .miniBlocos {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    height: 40px;
+    width: 200px;
+  }
+  
+  .miniBlocos p {
+    padding: 10px 10px;
+  }
