@@ -1,3 +1,4 @@
+//escopo de variaveis
 const urlApi = 'https://681e1b37c1c291fa663309e8.mockapi.io/v1/users';
 const registerName = document.getElementById('register-name');
 const registerEmail = document.getElementById('register-email');
@@ -8,22 +9,26 @@ const loginPassword = document.getElementById('login-password');
 const registerButton = document.querySelector('.sign-up button');
 const loginButton = document.querySelector('.sign-in button');
 
-registerButton.addEventListener('click', (e) => {
+//sempre que o botão registrar é clicado a função de registro é executada
+registerButton.addEventListener('click', (e) => {                                                   
     e.preventDefault();
     registerUser();
 });
 
+//sempre que o botão entrar é clicado a função de login é executada
 loginButton.addEventListener('click', (e) => {
     e.preventDefault();
     loginUser();
 });
 
-async function registerUser() {
+//função de registro
+async function registerUser() {                                                                    
     const name = registerName.value;
     const email = registerEmail.value;
     const password = registerPassword.value;
     const passwordConfirm = registerPasswordConfirm.value;
-
+    
+    //a confirmação da senha deve coincidir com a primeira senha informada
     if (password !== passwordConfirm) {
         alert("As senhas não coincidem!");
         return;
@@ -51,6 +56,7 @@ async function registerUser() {
             clearForms();
         } else {
             alert("Erro ao registrar usuário.");
+            clearForms();
         }
 
     } catch (error) {
@@ -59,6 +65,7 @@ async function registerUser() {
     }
 }
 
+//função de login 
 async function loginUser() {
     const email = loginEmail.value;
     const password = loginPassword.value;
@@ -72,6 +79,7 @@ async function loginUser() {
             clearForms();
         } else {
             alert("Usuário e/ou senhas incorretos. Tente novamente.");
+            clearForms();
         }
     } catch (error) {
         alert("Erro.");
@@ -79,7 +87,8 @@ async function loginUser() {
     }
 }
 
-function clearForms() {
+//função para limpar os campos do site após operações de login ou registro que são bem sucedidas
+function clearForms() {                                 
     registerName.value = '';
     registerEmail.value = '';
     registerPassword.value = '';

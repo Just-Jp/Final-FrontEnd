@@ -100,6 +100,7 @@ body {
     z-index: 2;
 }
 
+/* animações controladas pela tag .active */
 .container.active .sign-in{
     transform: translateX(100%);
 }
@@ -273,6 +274,7 @@ body {
     background-color: #2c224e;  
 }
 
+/* valores para desktop e tablet */
 @media (min-width: 500px) {
 
     .form-container h1 {
