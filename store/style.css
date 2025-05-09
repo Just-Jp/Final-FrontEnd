@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("../Images/BG_Ateliê_Alien.jpg");
+  background-image: url("../src/BG_Ateliê_Alien.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
