@@ -1,17 +1,32 @@
+  * {
+    font-family: "Poppins-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
   body {
     background-image: url("./assets/BG_Ateliê_Alien.jpg");
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center center;
-    color: #000;
+    color: #ffffff !important;
     font-family: "olivita";
     margin: 0;
-    padding: 2rem;
     min-height: 100vh;
     max-width: 100vw;
     box-sizing: border-box;
     border-radius: 0.5px;
 
+  }
+  h1 {
+    font-family: olivita, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  h2 {
+    font-family: olivita, sans-serif;
+    font-weight: 400;
+    font-style: italic;
   }
   @media (min-width: 500px) {
     flex-direction: column;
@@ -189,7 +204,6 @@
     @media (max-width: 991px) {
       .custom-navbar {
         width: calc(100% -1rem);
-        /* padding: 10px; */
       }
       
       .hamburger-menu {
@@ -367,10 +381,11 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  
 }
 .text-coluna {
-  width: 50%;
-  } 
+  width: 100%;
+} 
 #profile {
   margin-bottom: 40px;
 }
@@ -385,43 +400,69 @@
   max-width: 75%;
   height: auto;
   }
-  footer {
-    background-color: #14598a;
-    color: #ebb8d5;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  /* Conteudos do footer */
-  i {
-    font-size: 35px;
-  }
-  
+footer {
+  background-color: #14598a;
+  color: #ebb8d5;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Conteudos do footer */
+i {
+  font-size: 35px;
+}
+
+
+.blocosFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.miniBlocos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 280px;
+}
+
+.miniBlocos a {
+  display: inline-flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: #ebb8d5 !important;
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.miniBlocos p {
+  padding: 10px 10px;
+}
+
+.textoCopy {
+  width: 100%;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+
   .blocosFooter {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
   }
-  
-  .textoCopy {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
   .miniBlocos {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    height: 40px;
-    width: 200px;
-  }
-  
-  .miniBlocos p {
-    padding: 10px 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
