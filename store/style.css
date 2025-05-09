@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 body {
   background-image: url("../Images/BG_Ateliê_Alien.jpg");
   background-repeat: no-repeat;
@@ -5,7 +14,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: #f0f0f0;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 2rem;
   min-height: 100vh;
@@ -46,7 +54,6 @@ body {
 }
 
 .logo-text {
-  font-family: 'Georgia', serif;
   font-size: 18px;
   letter-spacing: 1px;
   color: #ebb8d5;
@@ -71,7 +78,7 @@ body {
   color: #ebb8d5;
   font-size: 14px;
   letter-spacing: 1px;
-  font-family: "olivita", sans-serif;
+  font-family: "olivita";
   padding: 8px 15px;
 }
 
@@ -182,6 +189,10 @@ h1 {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 2rem;
+  color: #ebb8d5;
+  font-family: "olivita";
+  font-size: 75px;
+  padding-top: 15px;
 }
 
 .gallery-container {
@@ -223,6 +234,7 @@ h1 {
 .card-content h2 {
   font-size: 1.3rem;
   margin: 0.5rem 0;
+  color: #ebb8d5;
 }
 
 .price {
@@ -379,6 +391,10 @@ h1 {
   .logo-img {
     height: 60px;
   }
+
+  h1{
+    font-size: 50px;
+  }
   
   /* Hamburger Animation */
   .hamburger-menu.active span:nth-child(1) {
@@ -478,4 +494,47 @@ h1 {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+footer {
+  background-color: #14598a;
+  color: #ebb8d5;
+  width: 100%;
+  text-align: center;  
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+/* Conteudos do footer */
+i {
+  font-size: 35px;
+}
+
+.blocosFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.textoCopy {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.miniBlocos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40px;
+  width: 200px;
+}
+
+.miniBlocos p {
+  padding: 10px 10px;
 }
