@@ -1,0 +1,469 @@
+  * {
+    font-family: "Poppins-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+    background-image: url("./assets/BG_Ateliê_Alien.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff !important;
+    font-family: "olivita";
+    margin: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    border-radius: 0.5px;
+
+  }
+  h1 {
+    font-family: olivita, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  h2 {
+    font-family: olivita, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  @media (min-width: 500px) {
+    flex-direction: column;
+  }
+  
+  @media (min-width: 700px) {
+    flex-direction: column;
+  }
+
+       /* Navbar Bootstrap customizado */
+    .custom-navbar {
+      height: 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #10598a;
+      box-shadow: 0 7px 10px #ebb8d5;
+      z-index: 1000;
+    }
+    
+    .navbar .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    /* Logo area */
+    .modif-logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto; 
+    }
+    
+    .logo-img {
+      height: 100px;
+      width: auto;
+      cursor: pointer;
+      justify-content: left;
+    }
+    
+    .logo-text {
+      font-family: "olivita", serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: #ebb8d5;
+    }
+    
+    /* Navbar brand */
+    .navbar-brand {
+      color: #ebb8d5;
+    }
+    
+    /* Navigation links */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links .nav-link {
+      text-decoration: none;
+      color: #ebb8d5;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-family: "olivita" "sans-serif";
+      padding: 8px 15px; 
+    }
+    
+    .nav-links .nav-link:hover {
+      color: #ffffff;
+    }
+    
+    
+    /* Cart icon style */
+    .cart-icon {
+      display: flex;
+      align-items: center;
+      background-color: #ebb8d5;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(235, 184, 213, 0.5);
+      transition: background-color 0.3s ease;
+    }
+    
+    .cart-icon:hover {
+      background-color: #009edb;
+    }
+    
+    .cart-icon span {
+      margin-left: 5px;
+      background-color: #ff4757;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 50%;
+      font-size: 12px;
+    }
+    
+    #cart-count {
+      background-color: #00bfff;
+      color: #121212;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    /* Hamburger Menu Styles */
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      z-index: 1001;
+      border: none;
+      background: transparent;
+      padding: 0;
+    }
+    
+    .hamburger-menu span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #ebb8d5;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      margin: 2px 0;
+    }
+    
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      transition: opacity 0.3s ease;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Estilo para mostrar o menu no mobile */
+    .navbar-collapse {
+      transition: right 0.3s ease;
+    }
+    
+    .navbar-collapse.show {
+      right: 0;
+    }
+    
+    .menu-overlay.active {
+      display: block;
+    }
+    
+    @media (max-width: 991px) {
+      .custom-navbar {
+        width: calc(100% -1rem);
+      }
+      
+      .hamburger-menu {
+        display: flex;
+      }
+      
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #0d4a74;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .navbar-collapse.show {
+        right: 0;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-links .nav-item {
+        margin: 10px 0;
+        width: 100%;
+      }
+      
+      .nav-links .nav-link {
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+      }
+      
+      .search-form {
+        margin: 15px 0;
+        width: 100%;
+      }
+      
+      .cart-icon {
+        margin: 15px 0;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .logo-img {
+        height: 60px;
+      }
+      
+      /* Hamburger Animation */
+      .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      
+      .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    
+    .text-coluna, 
+    .about-image {
+        width: 100%;
+    }
+    .text-coluna {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+    @media (max-width: 599px) {
+      .grid {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        gap: 0;
+      }
+      
+      .card {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        margin-right: 0;
+        display: none;
+      }
+      
+      .card.active {
+        display: block;
+      }
+      
+      .carousel-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+      
+      .carousel-control {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+      
+      .carousel-control:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 8px;
+      }
+      
+      .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+      }
+      
+      .indicator.active {
+        background-color: #00bfff;
+      }
+    }
+    
+    @media (min-width: 600px) {
+      .carousel-controls, .carousel-indicators {
+        display: none;
+      }
+      
+      .card {
+        display: block !important;
+      }
+      
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+#about {
+  padding-top:  100px;
+}
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.text-coluna {
+  width: 100%;
+} 
+#profile {
+  margin-bottom: 40px;
+}
+.about-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.about-image img {
+  flex-direction: column;
+  max-width: 75%;
+  height: auto;
+  }
+footer {
+  background-color: #14598a;
+  color: #ebb8d5;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Conteudos do footer */
+i {
+  font-size: 35px;
+}
+
+
+.blocosFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.miniBlocos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 280px;
+}
+
+.miniBlocos a {
+  display: inline-flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: #ebb8d5 !important;
+  font-size: 20px;
+  letter-spacing: 1px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.miniBlocos p {
+  padding: 10px 10px;
+}
+
+.textoCopy {
+  width: 100%;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+
+  .blocosFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .miniBlocos {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
