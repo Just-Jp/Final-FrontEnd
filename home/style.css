@@ -8,10 +8,25 @@ body {
   margin: 0;
   padding: 0;
   color: #79bae5;
-  background-image: url("../atelie-alien-bg.jpg");
+  background-image: url("./src/atelie-alien-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
+}
+
+.blocoAcesso{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+#acessoProdutos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 footer {
@@ -29,7 +44,6 @@ footer {
 i {
   font-size: 35px;
 }
-
 
 .blocosFooter {
   display: flex;
@@ -296,24 +310,14 @@ header {
   background-image: url("");
 }
 
+/* Configs do carrossel */
 .carousel img {
   max-height: 80vh;
   object-fit: cover;
 }
 
-#acessoProdutos {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px;
-  box-sizing: border-box
-}
-
-
+/* Ajustes para responsividade dos itens */
 @media (max-width: 768px) {
-
   .blocosFooter {
     flex-direction: column;
     align-items: center;
@@ -327,11 +331,10 @@ header {
     text-align: center;
   }
 
-    #acessoProdutos {
+  #acessoProdutos {
     padding: 20px;
-    text-align: center;
+    align-items: center;
   }
-
 
   img {
     max-width: 100%;
@@ -351,3 +354,5 @@ header {
     height: 300px;
   }
 }
+
+
