@@ -1,4 +1,6 @@
 
+// FINALIZAR COMPRA
+
 function finalizarCompra() {
   Swal.fire({
     title: 'Compra Finalizada!',
@@ -9,6 +11,8 @@ function finalizarCompra() {
 }
 
 document.querySelector('.checkout-btn').addEventListener('click', finalizarCompra);
+
+// TOTAL COMPRA
 
 // esse document queryselector pega todos os produtos no carrinho p tal função
 // o let subtotal é pra somar o total de todos os itens
@@ -53,4 +57,37 @@ function atualizarResumo() {
 
 document.addEventListener('DOMContentLoaded', () => {
   atualizarResumo();
+});
+
+
+// FRETE
+
+
+// qd o botao id=calcFre for clicado, ele vai executar a funcao abaixo
+document.getElementById('calcFre').addEventListener('click', () => {
+
+  // pega o q o usuario digitar (é tipo um "leia")
+  const cep = document.getElementById('cep').value;
+
+  // SE o cep nao tiver exatamente 8 digitos, BOOMM! ele da erro :(
+  // SE o cara meter letra ou emoji no campo do cep, BOOMM!! ele da erro de novo 
+  // dando erro ele mostra a caixa de alerta (Swal.fire)
+  // e vai dando return ate a condição ser verdadeira
+
+  if (cep.length !== 8 || isNaN(cep)) {
+    Swal.fire('CEP inválido', 'Digite um CEP com 8 números.', 'warning');
+    return;
+  }
+
+  // aq eu botei qualquer valor pro frete pra nao usar uma API do correio
+
+  const cepCalc = 77.00; // valor fixo fictício
+  document.getElementById('cepTot').textContent = `Frete: R$ ${cepCalc.toFixed(2)}`;
+
+  // aq eu pego o valor total da compra e somo com o valor do frete
+  const subtotalTexto = document.getElementById('total').textContent.replace('R$ ', '');
+  const subtotal = parseFloat(subtotalTexto.replace(',', '.'));
+  const totalComFrete = subtotal + cepCalc;
+
+  document.getElementById('total').textContent = `R$ ${totalComFrete.toFixed(2)}`;
 });

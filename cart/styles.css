@@ -419,11 +419,12 @@ h1 {
 
 .summary h2 {
   margin-bottom: 10px;
+  color: #f89b4f  ;
 }
 
 .checkout-btn {
   width: 100%;
-  background: #0e7e78;
+  background: #14598a;
   color: rgb(255, 255, 255);
   padding: 12px;
   border: none;
@@ -436,4 +437,26 @@ h1 {
 
 .checkout-btn:hover {
   background: #45a049;
+}
+
+.cepCalc {
+  margin-top: 30px;
+}
+
+/* style calcular frete */
+
+.form-label {
+  font-family: 'Olivita', sans-serif;
+  color: #ebb8d5;
+  font-style: italic;
+  font-size: larger;
+}
+
+/*style frete valor*/
+
+.subt-fre {
+  font-family: 'Poppins', sans-serif;
+  color: #ebb8d5;
+  font-style: italic;
+  font-size: larger;
 }

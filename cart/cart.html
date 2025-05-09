@@ -65,7 +65,7 @@
 
     <!-- conteudo -->
     <main class="content">
-        <h1>Seu Carrinho</h1>
+        <h1 style="font-size: 50px; color: #f89b4f;">Seu Carrinho</h1>
 
         <div class="cart-item">
             <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Produto" width="15%" />
@@ -91,6 +91,17 @@
             <!-- BUG NA FUNCAO REMOVERITEM(), SE EU DEIXAR SEM O r ELA NAO FUNCIONA DIREITO -->
             <button class="remove-btn" onclick="removerItem(this)">Remover</button>
         </div>
+
+            <div class="cepCalc">
+                 <label for="cep" class="form-label">Calcular Frete</label>
+                 <div class="input-group">
+                    <input type="text" id="cep" class="form-control" placeholder="Digite seu CEP">
+                    <button class="button-calc" type="button" id="calcFre">Calcular</button>
+                 </div>
+                <p id="cepTot" class="subt-fre">Frete: R$ 0.00</p>
+            </div>
+
+            
 
         <div class="summary">
             <h2>Resumo do Pedido</h2>
