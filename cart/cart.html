@@ -10,6 +10,7 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.typekit.net/mhy6flm.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./styles.css">
 
  
@@ -85,7 +86,7 @@
             <p>Preço: R$ 133.00</p>
             <p>Quantidade: 6</p>
         </div>
-        <button class="remove-btn" onclick="removerItem()">Remover</button>
+        <button class="remove-btn" onclick="removerItem(this)">Remover</button>
    </div>
 
        <div class="summary">
@@ -93,7 +94,7 @@
             <ul id="summary-list">
                 <li><strong>Produto 1:</strong> Descrição do produto 1 - R$ 150.00</li>
                 <li><strong>Produto 2:</strong> Descrição do produto 2 - R$ 133.00</li>
-            </ul>
+                 </ul>
 
             <p><strong>Total:</strong> <span id="total">R$ 150.00</span></p>
             <button class="checkout-btn">Finalizar Compra</button>
@@ -102,7 +103,9 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./hamburger.js"></script>
+    <script src="./remove-btn.js"></script>
     <script src="./script.js"></script>
+    
 </body>
 
 </html>

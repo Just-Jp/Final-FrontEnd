@@ -1,4 +1,12 @@
-function removerItem() {
-  document.querySelector('.cart-item').remove();
-  document.getElementById('total').textContent = 'R$ 0.00';
-}
+
+function finalizarCompra() {
+    Swal.fire({
+      title: 'Compra Finalizada!',
+      text: 'Obrigado por comprar com o Ateliê Alien 👽',
+      icon: 'success',
+      confirmButtonText: 'Fechar'
+    });
+  }
+  
+  document.querySelector('.checkout-btn').addEventListener('click', finalizarCompra);
+  
