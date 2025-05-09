@@ -1,5 +1,5 @@
 * {
-  font-family: "Poppins-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -8,25 +8,41 @@ body {
   margin: 0;
   padding: 0;
   color: #79bae5;
-  background-image: url("./src/atelie-alien-bg.jpg");
+  background-image: url("src/atelie-alien-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-.blocoAcesso{
+.blocoAcesso {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 50px auto;
   gap: 30px;
+  max-width: 1200px;
+  padding: 0 15px;
 }
 
-#acessoProdutos{
+.acessoProdutos {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+}
+
+#imgProdutos, #imgSobre {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#imgProdutos:hover, #imgSobre:hover {
+  transform: scale(1.02);
 }
 
 footer {
@@ -38,6 +54,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 /* Conteudos do footer */
@@ -51,6 +68,7 @@ i {
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .miniBlocos {
@@ -58,6 +76,7 @@ i {
   flex-direction: row;
   justify-content: center;
   width: 280px;
+  margin: 10px 0;
 }
 
 .miniBlocos a {
@@ -71,10 +90,11 @@ i {
   width: auto;
   max-width: 100%;
   padding: 0 10px;
+  transition: color 0.3s ease;
 }
 
-.miniBlocos p {
-  padding: 10px 10px;
+.miniBlocos a:hover {
+  color: #ffffff !important;
 }
 
 .textoCopy {
@@ -94,17 +114,12 @@ i {
   z-index: 1000;
 }
 
-.navbar .container {
+.navbar .container-fluid {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-@media (min-width: 700px) {
-  .container {
-    flex-direction: row;
-  }
+  padding: 0 15px;
 }
 
 /* Logo area */
@@ -119,12 +134,6 @@ i {
   width: auto;
   cursor: pointer;
   justify-content: left;
-}
-
-.logo-text {
-  font-family: "Georgia", serif;
-  font-size: 18px;
-  letter-spacing: 1px;
 }
 
 /* Navigation links */
@@ -142,6 +151,11 @@ i {
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff !important;
 }
 
 /* Cart icon style */
@@ -180,6 +194,7 @@ i {
   font-weight: bold;
 }
 
+/* Hamburger Menu Styles */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -188,6 +203,9 @@ i {
   height: 22px;
   cursor: pointer;
   z-index: 1001;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .hamburger-menu span {
@@ -215,25 +233,44 @@ i {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    width: calc(100% - 1rem);
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Estilo para mostrar o menu no mobile */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Configs do carrossel */
+.carousel {
+  margin-top: 100px;
+}
+
+.carousel img {
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 991px) {
+  .custom-navbar {
     padding: 10px;
-  }
-
-  .navbar .container {
-    padding: 0 10px;
-  }
-
-  .logo-img {
-    height: 60px;
   }
 
   .hamburger-menu {
     display: flex;
   }
 
-  .nav-links {
+  .navbar-collapse {
     position: fixed;
     top: 0;
     right: -100%;
@@ -241,83 +278,38 @@ i {
     height: 100vh;
     background-color: #0d4a74;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    padding-top: 100px;
+    align-items: flex-start;
+    padding: 80px 20px 20px;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
-  .nav-links.active {
+  .navbar-collapse.show {
     right: 0;
   }
 
-  .nav-links li {
-    margin: 1.5rem 0;
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .nav-links a {
+  .nav-links .nav-item {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .nav-links .nav-link {
     font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
   }
 
-  .hamburger-menu.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+  .cart-icon {
+    margin: 15px 0;
   }
 }
 
-/* Logo */
-.logo {
-  font-family: "Georgia", serif;
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-/* Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-buttons {
-  border-color: #14598a;
-  background-color: #14598a;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-/* Espaço extra para compensar a barra fixa */
-.content {
-  padding-top: 100px;
-}
-
-/* imagem para fundo da barra de navegação */
-header {
-  background-image: url("");
-}
-
-/* Configs do carrossel */
-.carousel img {
-  max-height: 80vh;
-  object-fit: cover;
-  position: relative;
-}
-
-/* Ajustes para responsividade dos itens */
 @media (max-width: 768px) {
   .blocosFooter {
     flex-direction: column;
@@ -332,18 +324,9 @@ header {
     text-align: center;
   }
 
-  #acessoProdutos {
-    padding: 20px;
-    align-items: center;
-  }
-
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  .container {
-    padding: 0 10px;
   }
 
   .carousel-inner {
@@ -355,5 +338,3 @@ header {
     height: 300px;
   }
 }
-
-
