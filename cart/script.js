@@ -6,7 +6,11 @@ function finalizarCompra() {
     title: 'Compra Finalizada!',
     text: 'Obrigado por comprar com o Ateliê Alien 👽',
     icon: 'success',
-    confirmButtonText: 'Fechar'
+    confirmButtonText: 'Ir para confirmação'
+  }).then((result) => {
+    if(result.isConfirmed) {
+      window.location.href = "finalize.html";
+    }
   });
 }
 
@@ -81,7 +85,7 @@ document.getElementById('calcFre').addEventListener('click', () => {
 
   // aq eu botei qualquer valor pro frete pra nao usar uma API do correio
 
-  const cepCalc = 77.00; // valor fixo fictício
+  const cepCalc = Math.floor(Math.random() * 30); // valor fixo fictício
   document.getElementById('cepTot').textContent = `Frete: R$ ${cepCalc.toFixed(2)}`;
 
   // aq eu pego o valor total da compra e somo com o valor do frete
@@ -91,3 +95,16 @@ document.getElementById('calcFre').addEventListener('click', () => {
 
   document.getElementById('total').textContent = `R$ ${totalComFrete.toFixed(2)}`;
 });
+
+// aqui ele da uma caixinha de alerta
+
+const cep = document.getElementById('cep');
+cep.addEventListener('blur', function() {
+  const valorDigitado = cep.value;
+  if (valorDigitado.trim() == '') {
+     Swal.fire('Digite seu CEP');
+    
+    // aqui ele zera o valor do frete sempre que sai do campo
+    document.getElementById('cepTot').textContent = `Frete: R$ 0.00`;
+  }
+} )
