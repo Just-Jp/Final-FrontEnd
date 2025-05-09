@@ -3,7 +3,7 @@
   font-weight: 400;
   font-style: normal;
 }
-/* #14598a #79b9e5 #57459b #ebb8d5 #0e7e78 #f89b4f */
+
 body {
   margin: 0;
   padding: 0;
@@ -13,8 +13,6 @@ body {
   background-size: cover;
   background-position: 100%;
 }
-
-
 
 footer {
   background-color: #14598a;
@@ -32,6 +30,7 @@ i {
   font-size: 35px;
 }
 
+
 .blocosFooter {
   display: flex;
   flex-direction: row;
@@ -44,14 +43,12 @@ i {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 40px;
   width: 280px;
 }
 
 .miniBlocos a {
   display: inline-flex;
   text-decoration: none;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #ebb8d5 !important;
@@ -60,7 +57,6 @@ i {
   width: auto;
   max-width: 100%;
   padding: 0 10px;
-  text-align: center;
 }
 
 .miniBlocos p {
