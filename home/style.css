@@ -18,15 +18,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  width: 100%;
+  align-items: center;
+  margin: 50px;
+  gap: 30px;
 }
 
 #acessoProdutos{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 }
 
 footer {
@@ -314,6 +314,7 @@ header {
 .carousel img {
   max-height: 80vh;
   object-fit: cover;
+  position: relative;
 }
 
 /* Ajustes para responsividade dos itens */
