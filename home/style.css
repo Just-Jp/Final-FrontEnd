@@ -38,26 +38,29 @@ i {
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  background-color: red;
 }
 
 .miniBlocos {
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   height: 40px;
   width: 280px;
-  background-color: blue;
 }
 
 .miniBlocos a {
-  display: flex;
+  display: inline-flex;
   text-decoration: none;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
+  align-items: center;
   color: #ebb8d5 !important;
   font-size: 20px;
   letter-spacing: 1px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .miniBlocos p {
